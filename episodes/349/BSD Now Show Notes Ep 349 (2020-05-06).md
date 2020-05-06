@@ -57,9 +57,9 @@ Interview topic
 ***
 
 ## Beastie Bits
-[You can now use ccache to speed up dsynth even more.](https://www.dragonflydigest.com/2020/05/04/24480.html
-[Improving libossaudio, and the future of OSS in NetBSD](http://blog.netbsd.org/tnf/entry/improving_libossaudio_and_the_future)
-[DragonFlyBSD DHCPCD Import dhcpcd-9.0.2 with the following changes](http://lists.dragonflybsd.org/pipermail/commits/2020-April/769021.html)
++ [You can now use ccache to speed up dsynth even more.](https://www.dragonflydigest.com/2020/05/04/24480.html
++ [Improving libossaudio, and the future of OSS in NetBSD](http://blog.netbsd.org/tnf/entry/improving_libossaudio_and_the_future)
++ [DragonFlyBSD DHCPCD Import dhcpcd-9.0.2 with the following changes](http://lists.dragonflybsd.org/pipermail/commits/2020-April/769021.html)
 ***
 
 ## Feedback/Questions
