@@ -1,0 +1,2 @@
+Hi guys, great podcast it's very informative. I am a total BSD noob looking to move from Windows to FreeBSD, I haven't yet. FreeBSD has everything I would need either natively or through ports, there is just one issue "gaming". Ideally I would like to run Windows in VM to play AAA games, but have no idea how to do it. I have listened to your podcast on GPU Pass-through and have looked at some online posts, but it seems a bit hit and miss.
+My only alternative is to run Linux and use Wine. Any advice would really be appreciated, thank you very much and keep up the good work.

@@ -1,0 +1,7 @@
+My boss had a question that I thought maybe ZFS or good old UFS could handle. Keep in mind he has been a software developer for 30 years so there is a method to his madness. You can answer this on the show if you think it's good material. I like the show
+
+"In the old DOS days you could string say 8 individual files together to be one file if you modified the FAT entries and eliminated the directory entries for the 7 other files and hooked the end of the previous file to the next one.
+
+I'd like to do the same thing on FreeBSD or LInux.  So, if I had (n) files sitting on disk and I wanted to connect file 1, 2, ...n together to make one file - is that possible?   The reason I want to do this is that we process say a 100,000,000 record file with 8 processors in parallel.   So, I'd like to write all resulting files out at once to the disk, then go thru and connect file 1 to 2, 2 to 3, etc. 7 to 8. so that there is a single file.    Currently, we finish processing segment 1, write it to disk, then the 2nd process has to wait for that to finish (while it is waiting, it saves it data to memory, then if it overflows to disk), then when the prior process is done, it reads from memory (or disk) and appends it to the prior processes output.   So, by the time you are done, you appended 100,000,000 results into a single file.    It would be nice if we could write all files out to disk, then 'hook them together' without reading and appending all the data.
+
+Seems like some FreeBSD or Linux file system could do that.."
