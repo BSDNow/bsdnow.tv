@@ -1,8 +1,12 @@
 
 ***INFORMATIONAL ONLY***
+
 Title:
+
 Description:
+
 Date: 2020-XX-XX
+
 Tags: freebsd, openbsd, netbsd, dragonflybsd, trueos, trident, hardenedbsd, tutorial, howto, guide, bsd, interview, … ADD NEW TAGS FOR EACH EPISODE
 
 ***NOTES***
@@ -50,8 +54,8 @@ Interview topic
 ***
 
 ## Beastie Bits
-[HardenedBSD April 2020 Status Report](https://hardenedbsd.org/article/shawn-webb/2020-04-24/hardenedbsd-april-2020-status-report)
-[NYC Bug’s Mailing List - Listing of open Dev Jobs](http://lists.nycbug.org/pipermail/jobs/2020-April/000553.html)
++ [HardenedBSD April 2020 Status Report](https://hardenedbsd.org/article/shawn-webb/2020-04-24/hardenedbsd-april-2020-status-report)
++ [NYC Bug’s Mailing List - Listing of open Dev Jobs](http://lists.nycbug.org/pipermail/jobs/2020-April/000553.html)
 ***
 
 ## Feedback/Questions
