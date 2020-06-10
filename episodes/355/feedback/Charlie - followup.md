@@ -1,0 +1,7 @@
+Hey,
+I'm the user from the "wpa_supplicant as a lower class citizen" story lst week. I just wanted to mention two things-
+1. I managed to get it working. After trying every different combination I could think of since our university's "public" network kicks you off if you log in to something as a student, I managed to figure out that OpenBSD's implementation of wpa_supplicant for some reason wouldn't take the password field as "psk" like it had for linux, rather it had to be a plain text "password=" field in wpa_supplicant.conf.
+2. Funny you should mention the password thing... I'd looked over my email several times before sending to @misc to ensure nothing outside of my email could be discerned from the text, however I realized my mistake quickly afterwards when something had converted one of the hex dumps into text for some reason to my password when I got a reply. After spending the most of the night changing all my passwords for good measure and making sure none of my accounts had been accessed, I decided to try to find a password manager I could host on one of my OpenBSD servers to help my account security. This led me to @jcs 's rubywarden implimentation of bitwarden that was meant for hosting on OpenBSD. Having been using that since, I figured I'd say something to y'all in case y'all haven't seen it as it was made by an OpenBSD dev for OpenBSD. 
+Here's the github link: https://github.com/jcs/rubywarden
+Best,
+Charlie
