@@ -1,0 +1,6 @@
+ 
+I am not at code auditor but this past few months, I have been reading through the FreeBSD source code files e.g libc, files in /usr/src/sys/sys, /usr/src/sys/libkern, /usr/src/sys/kern even /usr/src/sys/machine("i386, amd64, powerpc, etc").
+
+I also noticed that the bootloader was moved from /usr/src/sys/boot to /usr/src/ and the folder getting renamed "stand"
+
+Is it possible to get the info why the boot got moved?  
