@@ -1,0 +1,47 @@
+Active FreeBSD developers were invited to complete two surveys related
+to our Code of Conduct.
+
+The first survey, conducted in 2018, told us that:
+
+   - 94% of developers believe respectful communication in the project
+     is important; 1% disagreed
+
+   - 89% believe FreeBSD should be welcoming to people of all
+     backgrounds; 2% disagreed
+
+   - 73% say toxic people should be removed from the Project regardless
+     of their technical contribution; 9% disagreed
+
+   - 35% were dissatisfied with the code of conduct adopted in 2018, 34%
+     were neutral, and 30% were satisfied.
+
+These results indicated that there was sufficient dissatisfaction with
+the current code of conduct to warrant investigation.  After reviewing
+other open source codes of conduct, the FreeBSD Core Team investigated
+adopting either an LLVM-derived or a Go-derived code of conduct.
+
+A second survey was held at the start of June and had only one question:
+
+  Which code of conduct should FreeBSD adopt?
+
+   - An LLVM-derived code of conduct:
+     https://github.com/freebsd/core.10-public-docs/blob/master/CoC/llvm-based.md
+
+   - A Go-Derived code of conduct:
+     https://github.com/freebsd/core.10-public-docs/blob/master/CoC/golang-based.md
+
+   - Retain the current code of conduct:
+     https://web.archive.org/web/20200108075747/https://www.freebsd.org/internal/code-of-conduct.html
+
+RESULTS
+
+   -  4% favoured keeping the current code of conduct
+
+   - 33% favoured the Go-derived code of conduct
+
+   - 63% favoured the LLVM-derived code of conduct.
+
+Thus, the Core Team, following the preference of a majority of active
+FreeBSD developers, adopted the LLVM-derived code of conduct.
+
+THANK YOU
