@@ -1,0 +1,18 @@
+Hi guys,
+
+still enjoying the show since the recommendation on bsdtalk!
+
+So, (with no need to answer them all on one show) some questions for you:
+
+1) With Lua in the bootloader will Lua end up in base? Lua also used for ZFS Channel Programs, isn't it?
+
+2) How about an option to create a dataset for every users HOME? Having separate snapshots, quotas and delegations would be pretty useful
+
+3) Somewhat related: Do you know a tool for managing snapshots that purges empty ones, i.e. those with no changes/used=0kb? Maybe even keeping some more older ones around instead?
+
+Keep up the good show!
+
+Kind regards,
+Florian 
+
+PS: Thanks for the answer how to go from -STABLE to -RELEASE dozens of episodes ago! Worked like a charm : )
