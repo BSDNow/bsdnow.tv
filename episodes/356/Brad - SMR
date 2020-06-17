@@ -1,0 +1,10 @@
+Hi JT, Allan, and Benedict,
+
+Ever since the news came out that Western Digital has "come clean" about I have been a bit concerned. I have a FreeNAS with 6 3TB drives, and I have decided to start growing the pool by the zfs online -e method. Most (4) of my current drives are WD reds, and I was planning on replacing them with 6TB WD Reds, however, according to what I read, WD 2-6TB drives are likely SMR.
+
+Am I going to run into problems if I buy 6TB drives, or should I get 8TB or larger drive? Is there another brand that is better? Is it a tempest in a teapot?
+
+I appreciate any advice you guys may have.
+
+Thanks,
+--b
