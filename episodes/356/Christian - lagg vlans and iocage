@@ -1,0 +1,17 @@
+
+Hi Allan and Benedict,
+
+after listening to your podcast for a few years and hear your begging for questions all the time I decided to send one to you.
+
+I have a Unifi network at home and a FreeBSD server in the basement. It has two nics (igb0 and igb1). I splitted my network to several VLANs.
+
+I would like to assign the iocage jails to different vlans in my network and group the nics with lagg. But I'm struggeling to get it working.
+
+I bricked my network access several times while trying to get the lagg working.
+
+And I can't find any good information on how to assign the iocage jails to my vlans.
+
+Do you have any advice for me?
+
+Best regards
+Chris
