@@ -1,0 +1,1 @@
+I've never been to a BSD conference, but I watch a lot of presentations on YouTube. After a while, I began to notice a stuffed goat. It's taken a surprising amount of googling to piece together a (partial) biography of Groff. Was Shawn Webb's tweet at BSDCan 2014 the origin? Is Groff the BSD Goat still a thing?
