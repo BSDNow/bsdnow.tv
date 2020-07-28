@@ -1,0 +1,8 @@
+First, I love the show. I've been listening to it since day 1. Glad you're still doing great after splitting from JB.
+This show inspired me to run my own FreeNAS server so I can play around with and learn more about ZFS and BSD. Currently I'm in need of getting rid of the 24U rack that sits in my office. This is for the obvious reasons of noise, space, and heat. I live in Texas and my office sits at 86 deg. F at its coolest when the rest of the house is 75 deg. F.
+Before I waste too much of your time the precursor to my question is, does FreeNAS support removal of top level vdevs. I can't find any mention of it in the documentation for FreeNAS but I know its been added to ZFS.
+Here's what I've got and what I'm doing. I'm replacing my 12 bay Dell R510 with a tower. I'm selling all the servers and rack. I need a temporary FreeNAS server I can move to. To make it as easy as possible I'd like to reduce my current pools to just a couple of mirrors so I can move the drives to the mid-tower and just import the pools and restore my config so I don't have to recreate all the users and shares.
+I have a pool (lets call it tank1) with 2x mirrored vdevs of 3TB drives and a pool (we can call this one tank2) of 4x mirrored vdevs of 3TB drives.
+tank1 is only using 750GB of space and tank2 is only using 2.3GB of space.
+I'd like to reduce both of these pools to just a single mirrored vdev. This will leave me with only 4 drives that I can move to the tower and used this way until I build a new device that can hold more drives or replace the drives with higher capacity drives.
+I really appreciate all you've taught me about BSD and ZFS and if you've made it this far in my message, you're a couple of saints... er beasties 
