@@ -1,0 +1,2 @@
+
+What tooling does the FreeBSD documentation team use to build the HTML pages (like the handbook, porters-handbook, and rc-scripting)?  I browsed the SVN repo and all I see are Makefile and XML files.  Are you sitting there writing out XML code?
