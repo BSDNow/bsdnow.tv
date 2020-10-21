@@ -1,0 +1,5 @@
+Hi, I posted this question on FreeBSD Forums and got no reply so I thought I'd try you guys:
+Is there a ZFS pool property that can prevent its automatic import?
+I have a geli-backed mirror and when I manually attach the first provider, ZFS imports the pool (degraded, obviously). When I attach the second provider, ZFS re-silvers the pool.
+Is there a toggle to prevent the automatic import? Or must I export the pool first?
+Thanks
