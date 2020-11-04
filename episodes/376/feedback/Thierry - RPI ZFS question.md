@@ -25,7 +25,7 @@ now
 have 4 raspberry*.img files mounted true a loop device whit
 losetup..etc
 
-SEE SCRIPT:
+[SEE SCRIPT](https://github.com/BSDNow/bsdnow.tv/blob/master/episodes/376/feedback/script.md)
 
 The Question:.
   I see some fluctuating latency over my loop devices, whoud it be
