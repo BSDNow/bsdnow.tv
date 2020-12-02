@@ -1,3 +1,0 @@
-The FreeBSD Project and ${WORK} both use Mailman 2 for their mailling lists. With forthcoming removal of Python 2 from the ports tree, what steps will the FreeBSD Project take in this regard?
-
-I noticed Mailman 3 Core is available in the ports tree, mail/mailman3, but what about the two Django based components Postorius and Hyperkitty? Will Postorius and Hyperkitty get their own ports, or must we manually maintain these two components?
