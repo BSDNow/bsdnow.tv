@@ -1,0 +1,43 @@
+Hi Guys,
+
+
+I'm a big fan of the show and have been listening for the last couple of years. I've gone from someone that's never used any open source operating system to just recently configuring FreeBSD from scratch to run on an old Dell Precision laptop, which is my current daily driver. You've helped greatly.
+
+My question today is about the mixer program which I use to change the volume on my laptop. When I change the mixer volume from say 100:100 to 50:50 by using the command "mixer vol 50" the volume on my laptop goes from full volume to absolutely no volume being produced. Is this the expected result of this command? I thought that the change from 100 to 50 would result in a 50% decrease in volume, but that's not the case at all. Perhaps the change in volume isn't linear? *shrug*
+
+The results of the command "mixer" for both volume settings are displayed below.
+
+{
+
+Mixer vol  	is currently set to 100:100
+Mixer pcm  	is currently set to 100:100
+Mixer speaker  is currently set to 100:100
+Mixer line 	is currently set to   1:1
+Mixer mic  	is currently set to  67:67
+Mixer mix  	is currently set to  35:35
+Mixer rec  	is currently set to  35:35
+Mixer ogain	is currently set to 100:100
+Recording source: mic
+
+}
+
+{Mixer vol  	is currently set to  50:50
+Mixer pcm  	is currently set to 100:100
+Mixer speaker  is currently set to 100:100
+Mixer line 	is currently set to   1:1
+Mixer mic  	is currently set to  67:67
+Mixer mix  	is currently set to  35:35
+Mixer rec  	is currently set to  35:35
+Mixer ogain	is currently set to 100:100
+Recording source: mic
+
+}
+
+
+I'm curious to see what you think.
+
+
+Thanks,
+
+
+Ben
