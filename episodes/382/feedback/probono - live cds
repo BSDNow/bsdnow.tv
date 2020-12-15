@@ -1,0 +1,38 @@
+Probono - Question: ZFS for FreeBSD Live ISOs
+Thanks for this inspirational podcast.
+
+Here is my question:
+
+Live systems, or "Live CDs" as they used to be called, have been a
+passion of mine for a long time. Recently, I got drawn to FreeBSD
+thanks to the availability of several Live systems including FuryBSD
+[1]. As you reported in one of your last episodes, the FuryBSD Live
+ISOs are now fully ZFS based. However, the entire contents of the Live
+filesystem get transferred to RAM at boot time in order to make it
+read-write. This takes a looong time and takes up a lot of RAM.
+
+Are there better ways? There is unionfs.ko, a kernel module that
+implements a union filesystem, but apparently it is not stable enough
+to be viable as a root filesystem.
+
+This got me thinking, could one make some clever use of ZFS features
+to combine a read-only medium (the Live ISO) with a read-write medium
+(a ramdisk) to effectively construct a read-write root filesystem? [2]
+
+Something along the lines of
+
+* Make a ZFS filesystem, snapshot it. At this time it becomes
+read-only. Store this on the read-only ISO medium. At boot time, clone
+it. Cloning should be near instant and will result in a writeable
+clone; or
+* Construct a zfs pool from a combination of read-write (ISO) and
+read-only (ramdisk) devices (similar to how one can combine a spinning
+drive and a solid state disk)
+
+Do you think this is possible? If not, how much is missing to make it possible?
+
+Greetings from Darmstadt, Germany.
+probono
+
+[1] https://medium.com/@probonopd/furybsd-the-ubuntu-of-bsd-has-arrived-finally-try-it-today-26c0db51acaa
+[2] https://github.com/furybsd/furybsd-livecd/issues/210
