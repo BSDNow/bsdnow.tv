@@ -1,0 +1,8 @@
+Dear Allan and Benedict,
+
+Thank you guys for the amazing informative show, good job and you are really great!
+
+I have a question for you. I have seen many times in the specs that the HA option in TrueNAS systems implemented as a second controller. Do the controllers work in active/active mode or the second controller is in standby? If it’s not a secret, if both controllers are active at the same time, how does TrueNAS work with ZFS which is not cluster-aware filesystem?
+
+—
+Mike
