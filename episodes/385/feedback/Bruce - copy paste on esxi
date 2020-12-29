@@ -1,0 +1,6 @@
+Hi, Is there some trick we are missing on how to enable copy/paste into a VM console window on ESXI running FreeBSD?  It did not work on ESXi 6.0, 6.5 or 6.7 so we gave up.   We are able to copy/paste in to a console window running Centos on a different ESXi host but have not figured out how to copy/paste into a console window in FreeBSD.  Is is a combination of a FreeBSD setting and vmWare tools?   Running mostly FreeBSD 12.1 & 12.2.
+
+We mostly use ssh and rarely use the console but it would be a great addition if we could figure it out.
+
+Thanks!
+Bruce
