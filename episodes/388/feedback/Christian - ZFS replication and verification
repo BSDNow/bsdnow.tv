@@ -1,0 +1,191 @@
+Hi,
+
+first of all: congrats on your great show! Keep up the good work in 2021!
+
+I also have a question regarding ZFS replication and verification of a successful send/receive operation. I read "FreeBSD Mastery: ZFS" and "FreeBSD Mastery: Advanced ZFS" and also posted this on the TrueNAS forums.
+
+This is the story: I replicated all three datasets of my only TrueNAS Core pool to a remote backup (running Project Trident (up to date)) before I am going to destroy the old pool (thereby getting rid of the old GELI encryption) and creating a new pool with native encryption and otherwise the same properties. Then the datasets are to be restored in the new pool (same name) and everything should just feel and behave as before.
+
+I am on TrueNAS Core 12.0-U1.1, the only pool is named datapool1 and is a RAIDZ2. The remote backup pool is named backup1 and is a 2-disk MIRROR. Both pools are ashift=12 and recordsize=128 and also share the rest of their properties. The three datasets are named shares, iocage and mariadb_data.
+
+After replication, which seemed to have went without errors I am seeing differences in the dataset sizes. Mainly with iocage but I can find some differences on all of the datasets. During the initial snapshot/full recursive replication I did not stop any jails or services. But before I did the succeeding incremental replications I stopped all jails and the NFS service every time.
+
+Now, how can I verify that everything is replicated as needed? 
+
+Following are some properties of both pools. 
+
+BACKUP1:
+
+❱ zfs get logicalused,logicalreferenced,used,usedbydataset,usedbysnapshots,usedbychildren,usedbyrefreservation,referenced,compressratio -r -t filesystem backup1/iocage
+NAME                                       PROPERTY              VALUE          SOURCE
+backup1/iocage                             logicalused           8.95G          -
+backup1/iocage                             logicalreferenced     7.78M          -
+backup1/iocage                             used                  5.33G          -
+backup1/iocage                             usedbydataset         12.5M          -
+backup1/iocage                             usedbysnapshots       488K           -
+backup1/iocage                             usedbychildren        5.32G          -
+backup1/iocage                             usedbyrefreservation  0B             -
+backup1/iocage                             referenced            12.5M          -
+backup1/iocage                             compressratio         1.90x          -
+
+
+DATAPOOL1:
+
+% zfs get -r -t filesystem logicalused,logicalreferenced,used,usedbydataset,usedbysnapshots,usedbychildren,usedbyrefreservation,referenced,compressratio datapool1/iocage
+NAME                                         PROPERTY              VALUE          SOURCE
+datapool1/iocage                             logicalused           8.97G          -
+datapool1/iocage                             logicalreferenced     7.79M          -
+datapool1/iocage                             used                  7.19G          -
+datapool1/iocage                             usedbydataset         19.9M          -
+datapool1/iocage                             usedbysnapshots       1.11M          -
+datapool1/iocage                             usedbychildren        7.17G          -
+datapool1/iocage                             usedbyrefreservation  0              -
+datapool1/iocage                             referenced            19.9M          -
+datapool1/iocage                             compressratio         1.90x          - 
+
+
+On the forums I got the answer that "due to padding, datasets on RAIDZn will use a little more space than on mirrors". 
+
+Would comparing the properties logicalused and logicalreferenced on the original and backup datasets be a method of verification? Those two values seem to be almost identical on all of the datasets.
+
+
+Kind regards and many thanks in advance 
+Christian 
+
+
+
+
+____________________________________________________________________________________________
+More ZFS properties:
+
+❱ zfs get all backup1
+NAME     PROPERTY              VALUE                 SOURCE
+backup1  type                  filesystem            -
+backup1  creation              Mi Jan 13 11:34 2021  -
+backup1  used                  1.47T                 -
+backup1  available             5.57T                 -
+backup1  referenced            96K                   -
+backup1  compressratio         1.03x                 -
+backup1  mounted               no                    -
+backup1  quota                 none                  default
+backup1  reservation           none                  default
+backup1  recordsize            128K                  default
+backup1  mountpoint            none                  local
+backup1  sharenfs              off                   default
+backup1  checksum              on                    default
+backup1  compression           lz4                   local
+backup1  atime                 on                    default
+backup1  devices               on                    local
+backup1  exec                  on                    default
+backup1  setuid                on                    default
+backup1  readonly              off                   local
+backup1  zoned                 off                   default
+backup1  snapdir               hidden                default
+backup1  aclmode               passthrough           local
+backup1  aclinherit            passthrough           local
+backup1  createtxg             1                     -
+backup1  canmount              off                   local
+backup1  xattr                 off                   local
+backup1  copies                1                     default
+backup1  version               5                     -
+backup1  utf8only              off                   -
+backup1  normalization         none                  -
+backup1  casesensitivity       sensitive             -
+backup1  vscan                 off                   default
+backup1  nbmand                off                   default
+backup1  sharesmb              off                   default
+backup1  refquota              none                  default
+backup1  refreservation        none                  default
+backup1  guid                  2828916856323145085   -
+backup1  primarycache          all                   default
+backup1  secondarycache        all                   default
+backup1  usedbysnapshots       0B                    -
+backup1  usedbydataset         96K                   -
+backup1  usedbychildren        1.47T                 -
+backup1  usedbyrefreservation  0B                    -
+backup1  logbias               latency               default
+backup1  objsetid              54                    -
+backup1  dedup                 off                   default
+backup1  mlslabel              none                  default
+backup1  sync                  standard              default
+backup1  dnodesize             legacy                default
+backup1  refcompressratio      1.00x                 -
+backup1  written               96K                   -
+backup1  logicalused           1.52T                 -
+backup1  logicalreferenced     42K                   -
+backup1  volmode               default               default
+backup1  filesystem_limit      none                  default
+backup1  snapshot_limit        none                  default
+backup1  filesystem_count      none                  default
+backup1  snapshot_count        none                  default
+backup1  snapdev               hidden                default
+backup1  acltype               posix                 local
+backup1  context               none                  default
+backup1  fscontext             none                  default
+backup1  defcontext            none                  default
+backup1  rootcontext           none                  default
+backup1  relatime              off                   default
+backup1  redundant_metadata    all                   default
+backup1  overlay               on                    default
+backup1  encryption            off                   default
+backup1  keylocation           none                  default
+backup1  keyformat             none                  default
+backup1  pbkdf2iters           0                     default
+backup1  special_small_blocks  0                     default
+
+
+
+zfs get all datapool1
+NAME       PROPERTY                VALUE                   SOURCE
+datapool1  type                    filesystem              -
+datapool1  creation                Thu Jan 23 20:15 2020   -
+datapool1  used                    1.47T                   -
+datapool1  available               5.55T                   -
+datapool1  referenced              1.22M                   -
+datapool1  compressratio           1.03x                   -
+datapool1  mounted                 yes                     -
+datapool1  quota                   none                    default
+datapool1  reservation             none                    default
+datapool1  recordsize              128K                    default
+datapool1  mountpoint              /mnt/datapool1          default
+datapool1  sharenfs                off                     default
+datapool1  checksum                on                      default
+datapool1  compression             lz4                     local
+datapool1  atime                   on                      default
+datapool1  devices                 on                      default
+datapool1  exec                    on                      default
+datapool1  setuid                  on                      default
+datapool1  readonly                off                     default
+datapool1  jailed                  off                     default
+datapool1  snapdir                 hidden                  default
+datapool1  aclmode                 passthrough             local
+datapool1  aclinherit              passthrough             local
+datapool1  createtxg               1                       -
+datapool1  canmount                on                      default
+datapool1  xattr                   off                     temporary
+datapool1  copies                  1                       default
+datapool1  version                 5                       -
+datapool1  utf8only                off                     -
+datapool1  normalization           none                    -
+datapool1  casesensitivity         sensitive               -
+datapool1  vscan                   off                     default
+datapool1  nbmand                  off                     default
+datapool1  sharesmb                off                     default
+datapool1  refquota                none                    default
+datapool1  refreservation          none                    default
+datapool1  guid                    5837062205161202592     -
+datapool1  primarycache            all                     default
+datapool1  secondarycache          all                     default
+datapool1  usedbysnapshots         0                       -
+datapool1  usedbydataset           1.22M                   -
+datapool1  usedbychildren          1.47T                   -
+datapool1  usedbyrefreservation    0                       -
+datapool1  logbias                 latency                 default
+datapool1  dedup                   off                     default
+datapool1  mlslabel                                        -
+datapool1  sync                    standard                default
+datapool1  refcompressratio        8.64x                   -
+datapool1  written                 1.22M                   -
+datapool1  logicalused             1.51T                   -
+datapool1  logicalreferenced       5.18M                   -
+datapool1  volmode                 default                 default
