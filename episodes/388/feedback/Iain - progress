@@ -1,0 +1,14 @@
+Iain
+Hi guys!
+
+I hope you all are having a good New Year.
+
+I contacted you guys about a month ago about starting projects to get into FreeBSD. I have decided to spin up a FreeBSD VPS in Digital Ocean and then set up Nextcloud, Wordpress and Wireguard in seperate jails. I will commence at the end of the month when I can put time aside and report back on how a total newbie gets on.
+
+In addition in episode #385 you requested more feedback and talking points so I have two for you:
+
+1) I have heard that one can install FreeBSD with a desktop environment with a very low footprint. I have a very old Asus EEEPC netbook with a 4GB SSD hard-drive but I cannot seem to get FreeBSD to fit. Can FreeBSD be installed on such a small disk?
+
+2) I never knew until very recently that the streaming behemoth Netflix uses FreeBSD. This is really impressive. Would you care to talk about the relationship you have with Netflix? Is it ongoing? Do they influence the direction of the FreeBSD project? Are there any other big-hitters using FreeBSD that we do not know about? I think you guys should fly the flag about this as it is easy for people to think BSD is "just for geeks and techies" while in actual fact it could be underpinning many things in our daily lives that we just take for granted.
+
+All the best and please keep the show going
