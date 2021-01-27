@@ -1,0 +1,7 @@
+BSD people like to pick on Linux for writing a new tool instead of updating an existing tool, but there are cases where both BSD and Linux have done this. 
+
+For example, the getent tool can be used to do DNS queries using the POSIX standard system interfaces (as opposed to dig and drill, which use custom DNS query implementations. This makes them useful for debugging DNS servers, but not programs on you computer that use the POSIX interface to query DNS).
+
+getent uses the deprecated gethostbyname(3) function to query DNS. A while back, Linux added support for the modern POSIX getaddrinfo(3) interface to its getent, while NetBSD added a new program, getaddrinfo(1). This is imported into the other BSDs.
+
+I want to update NetBSD's getent to support the modern getaddrinfo(3), but I don't have a lot of experience contributing to BSD base. Can getent(1) and getaddrinfo(1) share implementation? Are there examples of similar programs that share code in base currently?
