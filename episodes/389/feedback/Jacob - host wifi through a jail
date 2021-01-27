@@ -1,0 +1,7 @@
+Hey y'all,
+
+I've been listening to your show for several months now and really enjoy it. I've been a fan of *BSD and Unix more broadly for most of my life, but I've only been using a Unix-like OS (Linux - usually Debian) for a couple years. Unfortunately, I can't use a *BSD as a daily driver because none of them support my wifi chipset and I only have a laptop without an ethernet port. However, I remember Allan mentioning once or twice that he's heard of people routing a network connection through a jailed OS on FreeBSD and, if I understood correctly, using that guest OS to operate the actual wifi chipset. Despite my best efforts, I've been unable to find documentation on how this might be done, and for obvious reasons don't have enough experience to figure it out myself. So my question is, how would one go about routing a wifi connection through a jail to a host FreeBSD system?
+
+On a related note, if anyone is willing to teach someone with no systems programming experience and only intermediate knowledge of C how to write wifi drivers for FreeBSD, send them my way because I'd love to be able to do that.
+
+Thanks,
