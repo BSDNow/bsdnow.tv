@@ -1,0 +1,7 @@
+Paul
+I recently got an APU2 device from PC Gear to use as main router for my home network. It is just a PC with 3 NICs and no video card, just are serial port. Perfect box to use as network appliance with FreebSD on it.  I have quite complex network, so running something like pfSence does not meet my requirements (Life of CCIE is never easy().  I need something which can handle multiple routing tables. I can easily create multiple routing tables, FIBs in FreBSD terms.  
+My question is, how to route traffic between different FIBs. Obvious approach is to crate multiple "epair" interface. Put one side of epair to FIBs and other one to some bridge group. Put IP addresses on epair, and use normal routing to send traffic between  FIBs. It will work, but looks ugly, I do not like idea of emulated transit network between FIBs, it just unnecessary. And will reduce performance for sure.  
+
+On proper routers, like Juniper boxes, you can setup route which has FIB name as next hop. All traffic matching that route will be sent to destination routing table and routed from there. No transit networks, nice and tidy.  
+
+Is it possible to do something like that under FreeBSD? I did not find any way to specify other FIB on man page for route(8). Is there way to forward traffic between FIBs directly without using transit networks?
