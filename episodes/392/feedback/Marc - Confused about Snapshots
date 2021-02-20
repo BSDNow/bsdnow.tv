@@ -1,0 +1,2 @@
+I have a question about deleting old snapshots.  How does that work?
+Snapshots stack on top of each other right?  Meaning the last will only hold changes from the previous snapshot.  How then can you delete an old one, wouldnt that be removing data that the new snapshots are reliant upon?

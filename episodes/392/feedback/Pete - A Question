@@ -1,0 +1,29 @@
+Not sure if this is the right place for this:
+My question is:
+I am using "churchers" bhyve on freebsd 12.2-RELEASE-p3 running on a x570 board with ryzen R9 CPU with 64GB of ram, I want to have my "windows vm" access both a pass true device and 4 physical hard drives. I can get it to do one or the other but not both at once. Below is my config for the VM: (as is my pysical hard drive do not show up, If I comment out "passthru0="6/0/0" my drives show in explorer.)
+
+loader="uefi"
+cpu=8
+memory=12G
+bhyve_options="-S"
+graphics="yes"
+xhci_mouse="yes"
+graphics_res="1600x900"
+network0_type="virtio-net"
+network0_switch="deplorable"
+ahci_device_limit="8"
+debug="yes"
+disk0_opts="sectorsize=512"
+disk0_type="ahci-hd"
+disk0_name="BackupR7.img"
+disk1_dev="custom"
+disk1_opts="sectorsize=512"
+disk1_type="ahci-hd"
+disk1_name="/dev/ada0,hd:/dev/ada1"
+disk2_dev="custom"
+disk2_opts="sectorsize=512"
+disk2_type="ahci-hd"
+disk2_name="/dev/ada3,hd:/dev/ada4"
+uuid="762f78e9-270b-11e8-87a4-309c230c9abc"
+network0_mac="02:15:5d:45:32:01"
+passthru0="6/0/0"

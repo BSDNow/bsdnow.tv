@@ -1,0 +1,2 @@
+We have multiple operating systems that can boot from ZFS. At what point - maybe soon - can we use ZFS pools instead of disk partitions to boot multiple OSes from the same ZFS VDEV?
+Seems like some boot loader magic similar to how BEs work today would do it.
