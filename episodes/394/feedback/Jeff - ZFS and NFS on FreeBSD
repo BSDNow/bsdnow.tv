@@ -1,0 +1,8 @@
+Hi Benedict, Alan and JT,
+
+Thanks as always for the show. I always learn something new, and it encourages me to keep broadening my *BSD skills. My current project is deploying an application to a jail using cbsd. I was originally wanting to mount an NFS share from my FreeBSD 12.2 NAS host into the jail via nullfs. Mounting the NFS share and exposing it to the jail from the jail host worked fine, but it was at that point I discovered write performance over the NFS share was only about 50 Megabytes per second (both from the jail mountpoint and the jail host mountpoint). I'm not expecting to outperform the SATA disks backing the share, but even 1 Gpbs line speed should be providing almost twice the throughput. As a comparison, copying to Samba on the same machine and zpool gives about 90 Megabytes per second throughput.
+
+Some Googling revealed, generally, that there is "bad performance" when writing to a ZFS file system shared out via NFS, due to the way that NFS writes data on top of ZFS. However, nearly all the information I found was at least four or five years old. The "best" solution, seemed to be to add an SSD slog. I am wondering if you guys have any advice for optimizing NFS-ZFS performance. I am open to adding a slog device (or simply writing to local disk and using ZFS replication to "bulk" storage), but if there are any tips I can apply in the interim, or in conjunction with a slog, I would very much appreciate it.
+
+Thanks again for the great service BSD Now provides to the *BSD community,
+Jeff Griffith

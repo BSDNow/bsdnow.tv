@@ -1,0 +1,11 @@
+Hey Allan and Benedict,
+
+I listen to the podcast weekly despite not usually running a *BSD.
+
+I just installed FreeBSD 13 BETA 4 as a fresh install on a Sager Notebook NP3146. So far, I've had a surprisingly easy experience getting the system installed and setup relatively quickly.
+
+I used the usb image for the install and setup my user account (adding it to both wheel and video), and then used pkg to install sudo, drm-kmod, hikari, sakura, firefox. I had to setup $XDG_RUNTIME_DIR and set $TERMINAL to sakura in /etc/profile to get everything working smoothly. I chose to use Hikari since it's an easily configurable keyboard-centric wayland compositor, and it is primarily developed on and for FreeBSD. It's not the most intuitive out of the box, and the default config seems to be designed for a German keyboard.
+
+I haven't tried getting my WiFi (Intel Wireless-AC 9560) working yet. (I gave up several months ago at last attempt.) Wish me luck!
+
+Paul

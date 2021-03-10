@@ -1,0 +1,5 @@
+Hey Allan, Benedict, and JT,
+
+Great shows, as always. I have been trying to get my brain around setting up dashboards with grafana. I found Benedict's Telegraf, InfluxDB, and Grafana pdf, and was able to set up monitoring on a jail and add a number of systems on my home network. It seems to be working fairly well, though one of my jails seems to have stopped reporting in. One of my questions is there seems to be a large number of permutations of backends (node exporter, collectd, telegraf, etc). Is there some reference to tell the best way to deploy monitoring assets to get best and most reliable monitoring from grafana? Can grafana and influx display dashboards from disparate sources simultaneously?
+
+In addition to the jail not reporting, I wanted to do was to monitor my TrueNAS. So, in grafana, I imported a dashboard (https://grafana.com/grafana/dashboards/12921), set up a graphite database in InfluxDB, and am getting no data:

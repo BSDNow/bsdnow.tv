@@ -1,0 +1,15 @@
+Hi Allan and Benedict!
+
+Love the show and I enjoy topics you cover
+
+Sending you a few questions
+
+1:  tarsnap - how much space does tarnsap take when determining what to backup/dedup etc?  I.e. if I am backing up /home?   Do I need to reserve a certain amount of space based on what size of data I am backing up?
+
+2: tarsnap running in a jail -- host mounted folder of say /share -- how to set this up?  I see that TrueNAS has a jail/plugin... but I have not found much information on setting this up.
+
+3: Allan - you have mentioned that you run Lumina Desktop... do you have a specific set of configurations or steps you follow when you setup a new FreeBSD desktop?    Are there features of the Lumina Desktop that other users might find useful?
+
+4: Benedict - your recent hardware failure - data recovery - curious to hear about how you did recover your data, restore etc?
+
+Thanks!

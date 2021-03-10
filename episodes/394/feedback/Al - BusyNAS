@@ -1,0 +1,12 @@
+Dear Allan, Benedict
+
+I've eagerly listened to bsdnow starting from episode 1.  Ever since I learned of the data healing property of ZFS, from your show, I've wanted to deploy it in a NAS.
+Recently I successfully repurposed a desktop system into a FreeBSD based NAS.  Installation was easy, following the handbook, and it works fine and has a UFS root with geli encrypted mirror.
+One evening, while working on my main desktop system, the idling NAS became busy.  A brief view of output from the top utility listed the 'find' command as the main source of activity and also 'zip' among others.
+Does ZFS normally engage 'find' and 'zip' from time to time?
+As a precaution, when the NAS was suddenly chattering away, I shut it down as well as a nearby Windows desktop.
+What should I examine next?
+I plan to upgrade the NAS SSH session authentication from password to public key.
+
+Sincerely,
+Al

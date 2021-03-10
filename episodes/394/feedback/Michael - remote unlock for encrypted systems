@@ -1,0 +1,20 @@
+Hi, guys!
+
+I just recently discovered your awesome podcast. Keep up the good work! I found it because I started getting into ZFS, and enjoyed some of Allan's conference talks and books. I find Allan very calming and pleasant to listen to, and Benedict is a wonderful host.
+
+My question is as old as time – it's "the chicken and the egg" meets "having you cake and eating it": How can I have my system encrypted at rest, and still do remote maintenance? The problem is unlocking the disks before booting from them. How do you enter a passphrase during early boot without a keyboard or ssh access?
+
+Datacenters offer all sorts of solutions to this, but it gets tricky with a basement home server. One way is to attach additional hardware to the server to give you low-level control, like a serial console controller[1] or a KVM-over-IP solution.[2][3][4] These are either very expensive, or they require finicky niche hardware like special cables, adapters and controller boards.
+
+Another way is to load some minimal system with sshd to allow unlocking your actual main system. This has been done[5] with a near-naked kernel and a custom-compiled minimal ssh server. I'm working on scripts to accomplish the same with more vanilla components: An unencrypted FreeBSD base system (the "outer base") would let you in via sshd and allow you to unlock your drives and pools before using "reboot -r" to reboot into your encrypted main system (the "inner base").
+
+Until we get a magical UEFI bootloader with sshd capabilities, this seems to best compromise to me. I'm still unsure how to integrate tools like beadm(1) with such a setup, however. I'm curious what you think, or how you've solved this problem before.
+
+Cheers!
+Michael
+
+[1] https://www.jpaul.me/2019/01/how-to-build-a-raspberry-pi-serial-console-server-with-ser2net/
+[2] https://www.kvm-switches-online.com/vnc-kvm-switch.html
+[3] https://pikvm.org/
+[4] https://mtlynch.io/tinypilot/
+[5] https://github.com/Sec42/freebsd-remote-crypto/
