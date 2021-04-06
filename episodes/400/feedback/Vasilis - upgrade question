@@ -1,0 +1,25 @@
+
+
+
+Hi Allan, Benedict & JT,
+I hope you are doing well!
+Because of your show and MWL's  Absolute FreeBSD I started my *BSD journey and joined this wonderful community. Thank you for the great show!
+
+In the Summer, I set up a computer with an AMD APU 3200G and as a newbie I run 12.2 Release.
+I look forward to installing 13.0 Release as it includes the AMDGPU drivers that will give me full functionality of the GPU component.
+My system has an SSD as zroot and two Iron-wolves as a zfs mirror pool for my data files.
+I haven't updated the pools to zfs 2.0 yet.
+
+My question is,
+In order to properly upgrade the system without messing the pool,
+shall I do # zfs export mypool before I install the new system
+and after the installation run # zfs import mypool ?
+
+I don't have tarnsnap backups yet and I don't want to lose the data in the zfs mirror pool.
+Thank you so much for your time and effort.
+
+I hope we will manage to handle the situation soon and be able to meet in person in BSDCan.
+
+Best,
+Vasilis
+

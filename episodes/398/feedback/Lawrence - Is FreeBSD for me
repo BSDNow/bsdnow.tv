@@ -1,0 +1,8 @@
+Hi, I have a question: Is FreeBSD for me? I am looking to replace my present Distro: CentOS 7. I am experimenting with various Distros: Debian, OpenSUSE, Fedora, etc. 
+The last time I looked at FreeBSD or any variant BSD was over 10 years ago. People told me BSD is for server and making it into a daily driver is like putting a square peg into a round hole.
+I installed FreeBSD 12.2, xorg, gnome3, etc. I have an i7, 16G RAM, 1 TB rotating rust, and NVIDIA graphics card. I tried and tried finding the proper install for this NVIDIA card. Searching FreeBSD Documentation, online, reading my two reference books('FreeBSD' by Annelise Anderson, and 'The Complete FreeBSD' by Greg Lehey), and viewing various YouTube videos(DJ Ware, RoboNuggie, etc). After 20+ hours of climbing down various rabbit holes, finally I found the solution. (https://docs.freebsd(DOT)org/doc/7.3-RELEASE/usr/share/doc/en/articles/compiz-fusion/nvidia-setup.html).
+My next job is to install my old Dell B1160w laser printer. So far no joy with CUPS or lpr.
+I guess FreeBSD is NOT for me. It test my patience and separates water from oil.
+Sorry for the rant, but this process has been frustrating. Reading comments I find fellow travelers also having a problem installing NVIDIA card. I now know why Mr. Torvalds has a dislike for NVIDIA.
+Thank you for your Podcast. I have and continue to listen all through this COVID isolation.
+Lawrence

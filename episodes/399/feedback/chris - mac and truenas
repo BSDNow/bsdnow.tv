@@ -1,0 +1,17 @@
+Hi Alan and Benedict,
+
+Love your show. I have a few question for you.
+
+I have a 4TB Truenas box and am recently having trouble connecting to it over SMB protocol from my new M1 Macbook Pro. It worked for several months, then after a recent Big Sur update, something changed and now the connection just times out. However, I can use the old CIFS protocol which works but is slower and frequently disconnects. I filed a bug report with Apple but haven't heard back.
+
+On a previous Macbook pro (2012), over the course of various OS versions, I had success with NFS for a while, then after that broke, I got SMB to work.
+
+Do either of you use Big Sur on a Mac to connect to Truenas? If it works for you, is it the M1 chip? What is the best protocol to use between Mac and Truenas? NFS? SMB? CIFS? Apple Talk?
+
+If I decide to use Apple Talk (if it's still supported), is it risky to share the same file system over NFS, Samba, and Apple Talk? I've been sharing between Windows and Linux for a very long time using NFS and Samba with no issues.
+
+Would love to get your input and perhaps tips for debugging this most irritating problem. It seems Apple has a problem playing well with others. :~(
+
+Thanks,
+
+Chris

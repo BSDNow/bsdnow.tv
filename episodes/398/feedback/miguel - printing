@@ -1,0 +1,14 @@
+Hello Alan and Benedict,
+
+About 2 years ago I emailed the show asking if you guys knew anything about making a CUPS server on one of the single board computers like a Rapsi using BSD. You suggested I try it myself and make a writeup about it. I might do the former but I would at least like to update you even if its 2 years later.
+
+I based my purchase on OpenBSD's ARM64 support page, and went with an ODROID. The biggest learning experience here was having to use serial console, this is something I have never done before and it was pretty cool to learn. Installation was no issue. What ended up being a bit of an issue was the printer we have at home.
+
+Its an HP consumer-level printer which seems fairly proprietary at first glance, it requires a special metro-style app on windows to work. However on OpenBSD it was a matter of just plugging in the printer via USB to the odroid, setup Samba and Cups, HPCups as well which happens to be in OpenBSD's ports and I had a working printer server! 
+
+Now if only cartidge prices weren't terrible.
+
+Anyways, I just wanted to share this since this was on my mind for a bit.
+
+P.S. Benedict you emailed me another time asking for a link to the in-progress PS4 emulator, here it is: https://github.com/AlexAltea/orbital
+There's not much to show yet but it's a good effort considering they're working with both a literal and figurative black box.

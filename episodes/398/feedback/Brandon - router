@@ -1,0 +1,6 @@
+Hi,
+
+Thanks for the show, I know it takes a lot of time, and it's appreciated. I'm setting up a home router with OpenBSD (PCEngines APU), but rather than doing the wifi straight from the BSD box I wanted to have a separate module/router that I plug into the BSD box to handle wifi (& maybe give me additional wired ethernet ports as well). I think Allan mentioned a year or so back that he does this. Is there a specific type/brand/whatever of wifi adapter I should be looking at for this, or can I just plug any router in & 'extend' that way? I've tried looking online without success.
+
+Thanks!
+Brandon
