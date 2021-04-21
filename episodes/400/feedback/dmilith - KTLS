@@ -1,0 +1,10 @@
+ dmilith via discord
+
+
+I have one regarding kTLS and it's real world usability for end users. 
+Is it only useful for people with 100Gbit NICs for like $1000+? Is there a reason why it's 
+still not enabled by default (at least openssl side in base system, where WITH_OPENSSL_KTLS=1 
+is required in src.conf). Is it even worth playing with for slower 10G networks? Does it 
+affect only throughput or also latency? I did Nginx build with that feature enabled, but it's
+hard to find any info about how to even configure that (except obvious - enabling sendfile 
+and picking supported cipher)…
