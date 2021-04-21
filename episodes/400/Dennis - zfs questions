@@ -1,0 +1,56 @@
+Hi Alan and Benedict,
+
+Thank you for running the show! 
+
+Thanks to your show, and especially the feedback and question section, I am being able to deepen my knowledge of FreeBSD and ZFS. 
+
+Alas, the time has come for me to ask for help with ZFS.
+
+I had a ZFS pool with a single 8TB drive in it. My plan was to buy another drive later and "zpool attach" it. Instead I bought two 12TB drives so I first ran
+zpool attach mypool 8tbdrive new12tbdrive
+and waited for the resilver process to finish. Then I ran
+zpool detach mypool 8tbdrive 
+followed by
+zpool attach new12drive another12tbdrive
+and waited for the resilvering to finish.
+
+Unfortunately, this one didn't go so well, zpool status -v mypool output indicated that there were some issues:
+
+pool: mypool
+ state: ONLINE
+status: One or more devices has experienced an error resulting in data
+	corruption.  Applications may be affected.
+action: Restore the file in question if possible.  Otherwise restore the
+	entire pool from backup.
+   see: http://illumos.org/msg/ZFS-8000-8A
+  scan: resilvered 3.08T in 0 days 07:53:11 with 6 errors on Sat Apr  3 07:39:41 2021
+config:
+
+	NAME                    STATE     READ WRITE CKSUM
+	mypool                  ONLINE       0     0    24
+	 mirror-0              ONLINE       0     0    48
+	   gpt/zfs-wd5PG8.eli  ONLINE       0     0    48
+	   gpt/zfs-wd5PKU.eli  ONLINE     139 1.56K   500
+
+errors: Permanent errors have been detected in the following files:
+
+        <metadata>:<0x8c>
+        <metadata>:<0x99>
+ 
+I ran "smartctl -a" on all drives and antother12tbdrive (the one that backs gpt/zfs-wd5PKU.eli) had SMART errors.
+
+I'll be replacing the drive so I ran "zpool detach mypool another12tbdrive" and then "zpool scrub mypool" to get rid of the errors. To my surprise, "zool status" still reported the errors!
+
+Question 1: Can I just run "zpool clear" to get rid of those errors? I am fairly confident that the drive itself is healthy.
+
+Question 2: I'm reasonably sure that the old 8tbdrive is in a good condition (I did scrubs regularly and SMART status is good), so I thought that I could just "zpool import" the old drive under new pool name, nuke the new12tbdrive and "zpool attach" it again, but "zpool import" doesn't see the old drive.  Is there a way to import a detached drive as a new pool?
+
+Question 3: If I just run "zpool attach new12tbdrive 8tbdrive" will the corruption be fixed, because the old drive presumably contains intact data? Or 8tbdrive will be overwritten (resilvered?) based on what is on new12tbdrive, thus propagating the corrupted data?
+
+I'm not sure what's the best course of action here... it'll be at least two weeks till I get the replacement. Ideally I'd want to not mess the data and have a 2-disk mirror, while waiting.
+
+Thank you,
+Denis
+
+PS. I'm running the pool on FreeNAS 11.3-U5 which itself runs on FreeBSD 11.3-RELEASE-p14.
+PPS. The disks are encrypted with geli. I used "8tbdrive", "new12tbdrive", "another12tbdrive" in the text as pseudonyms in place of "gpt/blah.eli".
