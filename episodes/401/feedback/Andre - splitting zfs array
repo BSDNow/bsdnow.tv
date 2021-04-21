@@ -1,0 +1,18 @@
+Hi Allan, Benedict and JT,
+
+Thanks again for all your work for giving us our weekly BSD fix.
+As promised, I'll keep my questions trickling in for the feedback and questions.
+My TrueNAS migration from a 5 disk RAID-Z1 with 4 TB drives to an array with just 3 disks in Z1 by using a degraded array (2 disks and a file) worked flawless. However, my only gripe for using this method would be that the ZFS naming of the drives gets messed up. The drive that replaced the file does not get a ada designation, which tickles my slightly “Sheldoni” sences ;-)
+
+Now to my question of today.
+I have been a bad boy and not implemented a decent backup for my server. I have some smaller disks which I fill through a windows desktop and store at work. A second offsite server is not in the picture for now. Last Black-Friday I managed to get some good deal on a pair of 6TB seagate USB drives. I would like to use ZFS snapshot and replication to create a rolling backup between the server and my desk at work. I have several snapshotting live-times and frequencies, based on the volatility of the data. I have unsuccessfully tried to find guides online, but have not been able to translate an esata guide for my use.
+
+My plan is to do a replication of several dataset snapshots to the first USB-drive, not all the data has to be backed-up (I can always re-rip those CD’s), and take this drive offsite. The second drive remains attached To the server, receiving all the same and the new snapshots. After a week the second drive is taken offsite and the first is returned to receive updated snapshots. I have tried this, but TrueNAS did not like it and failed to start the replication.
+
+Is this plan viable with ZFS, or should I settle for rsinc?
+
+If yes, Would it be possible for ZFS to write the same replication process to both USB-drives? Or do I need to setup duplicate replication setups?
+
+Again thanks for all your help and looking forward to the next show.
+Kind regards, Freundliche Grüße,
+André 

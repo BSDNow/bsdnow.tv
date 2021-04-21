@@ -1,0 +1,18 @@
+Hi Allan & Benedict, BSDnow is still my favorite podcast.  I had a quick question about ZFS snapshots.
+
+I was wondering when this change happened to list ZFS snapshots?   I was able to create the snapshots fine before an upgrade and when I tried to list all of them so I could destry them at the end of the upgrade (FreeBSD 11.4-p9).   I had difficulty, since it now wanted additional zfs-features flags, I think.
+
+old command:
+zfs list -t snapshot
+
+new command:
+zfs list -rt all
+
+
+Followup question:
+Is there a different command that now lists "no datasets available" after you remove all the snapshots?
+------
+Use the zfs list -t snapshot OR zfs list -rf all to verify ALL snapshots are destroyed!  The command will return "no datasets available" if all the snapshots were properly destroyed.
+
+Thanks!
+Bruce C

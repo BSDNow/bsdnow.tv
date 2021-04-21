@@ -1,0 +1,25 @@
+Dear Allan, Benedict, JT and special guest Tom,
+
+In the recent episode of the best podcast in the universe (BSDNow) I heard you asking for questions. I was thinking about that and I realized that I'm dealing with one not so much discussed annoyance in ZFS and Allan might have an answer for that.
+
+I run two Linux VPS instances from two different providers in two different European countries and I sync data from active VPS to the other secondary VPS. I started with this process many years ago since I always knew that one provider can burn down (like OVH) or more likely they can shut down my account for no reason or go out of business. If something like this happens I can easily add a few virtual CPUs to the secondary instance and make it active by changing DNS to its IP.
+
+Approx. two years ago I started using ZFS for this uni-directional data replication and I automated snapshotting and replication of approx. 250 GB simply using shell script and cron.
+
+I have many ZFS datasets in tree like structure. In other words, there is only one dataset on top of root dataset (pool dataset) and that dataset has more that one dataset and those datasets have more datasets and so on...
+
+The single dataset on top of the root (pool) dataset makes it easy for RAW replication that I have to use since that single dataset is encrypted and all other datasets inherit the encryption.
+
+I have two logical types of snapshots. Technically they're all just snapshots but I use different naming convention to differentiate between automatic snapshots and manual. Manual start with date and time and description and automatic start with word "auto" and then date and time.
+
+There are two annoyances in this setup:
+
+a) A few datasets in this tree-like structure have data that can be regenerated - it is not important to snapshot or send over. The scheduled automated snapshots are simply done by "zfs snapshot -r pool/first_dataset" and these not important datasets are therefore also snapshotted and send to the secondary instance. I could create another dataset on top or root (pool) dataset for this type of data that shouldn't be snapshotted and replicated but I really like the tree structure I created. Could you please tell me is there a way how to ignore a few datasets in a tree of datasets to be recursively snapshotted or at least to be ignored for RAW send/receive?
+
+b) Sometime I work on something and I manually snapshot the project dataset and for example a day later I want to revert all changes. The problem is that in order to rollback I have to use "zfs rollback -r" that deletes all automatic snapshots that happened after my manual snapshot. Deleting automatic snapshots is cool with me but not cool with the RAW send/receive so by doing this I basically break it and to fix it I have to destroy all ZFS datasets on the secondary VPS and send all 250GB again. And that's both time consuming and not very secure since during the send all my data are only on a single VPS. Also I don't have unlimited bandwidth so I don't want to do it too often.
+
+Thank you for giving me this chance to ask a question.
+
+Kind regards,
+
+Dan
