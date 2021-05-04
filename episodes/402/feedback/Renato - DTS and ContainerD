@@ -1,0 +1,15 @@
+Hello Allan and Benedict,
+
+Although I'm not a FreeBSD user, I've been tuned on the show for some years now; it's a great source of information about the BSD world.
+
+Helping you guys with the lack of questions, I would like to ask couple things:
+
+1 - A few years ago I tried to write a kernel module for the etherswitch found on the Lamobo R1 or BananaPi R1 SBC. Although unfruitful, pushing the limits of my C knowledge, learning about the kernel internals and the hardware discovery flow was a great exercise. While doing this, I noticed that on these SBC's it usually relies on the Open Firmware Device Tree definitions. I've searched for an official documentation about it and by that time wasn't able to find anything; like something to help me understand some of the details of device trees like the mix of header files with the device structure.
+Is there a place that you guys recommend to learn about this?
+I'm curious if this will end up in the FreeBSD documentation now that aarch64 is a tier 1 architecture.
+
+2 - I know that jails are an awesome piece of software that I've seen usage as far as 1998. With all the hype that Docker had I was hoping that, with the definition of containerd, some of the tooling and usefulness of an image repository would land on FreeBSD as well. I've looked after containerd implementations for FreeBSD but all that I could find relies on ZFS as the layered file system and nothing about UFS implementations. 
+Are there any official efforts to implement containerd on FreeBSD that you guys are aware of?
+
+Thanks for years of updates.
+Renato Aquino
