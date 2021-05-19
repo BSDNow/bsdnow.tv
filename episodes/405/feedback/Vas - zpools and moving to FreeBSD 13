@@ -1,0 +1,18 @@
+Hi Allan, Benedict, JT and Tom,
+Greetings and salutations from Windsor Ontario.
+Thanks to your show and MWL Absolute FreeBSD I entered the *BSD world 2.5 years ago.
+I started with a RaspberryPi and I managed to try many FreeBSD features on it. Gopher, Apache, zfs mirror using two usb thumb-drives, DLNA server to name a few.
+
+Finally last summer I built a new computer with a Ryzen 3200G, 16G of memory, an ssd zroot for the system and two ironwolves 4T each as a mirror zpool. I use the ironwolves pool as storage for various files as a NAS. As a newbie I am trying to avoid surprises and I run FreeBSD 12.2-R and I haven't 'zpool upgrade' my pools yet.
+
+I am very excited for the FreeBSD 13.0-R as I will get my graphics supported.
+One of the following weekends I will take the time to do the new installation. It is going to be a nice opportunity for me to set up the system from scratch and clean it up.
+
+I would like to ask you what would be the proper/safer way to upgrade my computer. I don't care about the zroot pool but I do care about the ironwolves mirror pool.
+Shall I 'zpool  export' the ironwolves before the new install and 'zpool import' after the finish of the installation?
+Is there anything specific to be careful during the process?
+
+Thank you for being there for the *BSD community.
+I hope to see you soon at the next BSDCan.
+
+Best,

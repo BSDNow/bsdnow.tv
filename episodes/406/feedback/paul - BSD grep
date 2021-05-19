@@ -1,0 +1,5 @@
+Hey Allan, Benedict & JT,
+
+Happy FreeBSD 13 release! I read in the release notes that several GNU components have been removed. One that surprised me was that GNU grep had been previously used by default, and I wasn't able to find much detail on this. I remember previously seeing people complain that macOS uses BSD grep instead of GNU grep. Does this mean macOS beat FreeBSD at implementing BSD grep? Are there any big differences - other than licensing and minor syntax - in these two tools?
+
+Paul 

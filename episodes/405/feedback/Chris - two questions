@@ -1,0 +1,8 @@
+Hello - since Benedict always seems so sad about the lack of questions, I felt compelled to get in touch and cheer him up 
+
+I have 2 questions, actually:
+1) At some point Benedict mentioned that he manages BSD servers within a university department, and it sounded like this might be related to scientific computing and HPC. Could you talk a bit more about that - in particular what role BSD serves in such a setting? I am not aware of any scientific packages which are routinely run on BSD rather than Linux.
+
+2) Can you guys recommend good "starter projects" for someone already comfortable with Linux but who has never tried BSD - ideally something which would highlight the strengths it has over Linux? The main thing I can think of so far is ZFS - I plan to use FreeBSD the next time I rebuild my home storage server, but it would be nice to have some other use-cases too. Jails seem like the obvious choice as I already try to use Multipass on Ubuntu or Podman containers on RHEL-based distros whenever I can - just wondering what other functionality BSD has which might not be so obvious, but which you think is an improvement over Linux worth trying out.
+
+Thanks! 

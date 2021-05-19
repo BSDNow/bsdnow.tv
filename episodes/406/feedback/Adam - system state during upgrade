@@ -1,0 +1,15 @@
+Hi Guys,
+
+I'm a long-time listener and fan of the show. My question is about the state of a FreeBSD system during the upgrade process. As I understand it, the steps for a major version upgrade to FreeBSD are as follows:
+
+1. Run freebsd-update -r <version> upgrade
+2. Run freebsd-update install
+3. Reboot
+4. Run freebsd-update install again
+5. Reinstall all packages
+6. Run freebsd-update install again
+
+Can you describe the state of the system between each of these steps? What should I expect to be working or not working after each step?
+
+Thank you,
+Adam
