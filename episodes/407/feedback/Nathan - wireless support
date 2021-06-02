@@ -1,0 +1,1 @@
+I have a lot of old laptops around the house, and I like to install different operating systems on them. It would be nice to know ahead of time whether the wifi is going to work. Does any of the BSDs have a list of which wireless cards it supports? I know I can look in individual OpenBSD driver man pages for example, but does anyone have the whole list in one place?

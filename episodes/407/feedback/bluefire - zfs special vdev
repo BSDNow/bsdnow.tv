@@ -1,0 +1,9 @@
+I am running TrueNAS and am making a new pool that will be ~50TB in capacity and will mostly store media, but will also have some jails, VMs, and a few other things on it. 
+
+I think I want to set it up with special metadata VDEV but don't know what the size of the disks should be or what options I should set for the pool in general.
+
+I have both of the ZFS books written by Allan Jude and Michael W. Lucas, but I am pretty sure that they were written before this type of VDEV was a reality.
+
+Where can I find good information that is up to date about these special VDEV types?
+
+Sorry if this has been answered already, I am quite far behind on listening to the shows.
