@@ -1,0 +1,21 @@
+Hi guys!
+
+Thanks for a great show! I've been watching/listening to your show for many-a-year by now, and I'm also a BSD convert partly thanks to it. You keep requesting feedback, and I've had a project in mind for a long time and would greatly appreciate some input from you.
+
+We're at a point in human history where we're able to take pictures at a moments notice and store them indefinitely without loss at relatively low cost. However, as far as I know, there are currently no commercial solutions to let this data transcend generations. Thus, a lot of this data will probably be lost with time. 
+
+Now, since I started listening to your show, I've become a father of two wee trolls (as we say in Norway) and have thus become more aware of my heritage. If possible I would like to collect all pictures and videos of us, and hopefully pass the task to future generations such that perhaps my grand-grand-grand children can get a unique glimpse into their ancestor's past. A family relic or heirloom of sorts.
+
+There are of course many problems that have to be solved, and I'm not expecting you to solve everything. However, so far -- perhaps biased by listening to you for so many years -- I thought a good solution would be ZFS for local storage and Tarsnap for off-site backup. This would hopefully ensure that my data is safe from corruption, disk failures, floods, fire, etc. and easily transferable to new servers when the time comes. The only problem is that I have no experience with any of this, and would greatly appreciate if you could give some initial pointers. 
+
+- Hardware: I was initially thinking of using a HPE MicroServer, but it has room for only four disks. Is this enough, or do you have any suggestions in a similar form factor size? Note that the server might also be used for some other, secondary tasks.
+
+- How should I configure the drives? Four drives in RAID-Z, or for one system drive plus three storage drives?
+
+- How should I configure ZFS? I know this is a big one, but the most important requirements are integrity and extensibility/transfer to future servers. Are datasets important here?
+
+- I would also need some sort of private cloud solution which would simplify the process of transferring files from mobiles to the server, and perhaps viewing the stored content from an app and/or browser. Any suggestions are appreciated.
+
+Thanks for reading, and keep up with the great work!
+
+- rafael

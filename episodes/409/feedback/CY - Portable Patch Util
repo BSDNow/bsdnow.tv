@@ -1,0 +1,14 @@
+Hi guys!
+
+Thanks for a consistently interesting and informative podcast!  In recent episodes you have indicated the feedback has been a little thin. Well, I have a rather offbeat question but since things are slow what the heck, I'll throw it in the queue...
+
+I maintain a large cross platform (Windows/OSX/Linux/*BSD) C/C++ program built using CMake, and one of the ways we keep things portable and self-contained is to (optionally) bundle 3rd party dependencies.  To keep maintenance simple, we prefer to keep the upstream sources vanilla and apply patches when needed.  Unfortunately, the fly in the ointment in this regard is Windows, which (to the best of my knowledge) has no built-in native equivalent to patch.
+
+So of course I tried my standard goto in this situation - I grabbed one of the *BSD codebases with patch capability (OpenBSD's patch utility in this case) and tried to use the libressl portability shims to get it to build with Visual Studio so we can guarantee patch's availability ourselves at need.  I was eventually able to get it to build(1) but when I tried hooking up the tests on Windows many of them failed.
+
+Before going any deeper into the rabbit hole, I thought I would seek an expert answer to the following two questions:  1) do you know if someone already ported one of the *BSD patch tools to Windows and 2) if not, is there a standard convention for how to handle CRLF vs LF file conventions with patch tools?  Since *BSD code often get used in lots of strange places, perhaps the communities have evolved conventions for how to handle similar situations?
+
+Thanks,
+CY
+
+(1) https://gitlab.com/starseeker/unix-tools/-/tree/master/patch

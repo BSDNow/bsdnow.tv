@@ -1,0 +1,8 @@
+Dear Alan, Bendict,
+
+Why do I have to "zpool import -a" my zfs pool each time I boot my system?
+When my, geli encrypted, disk mirror was installed on RELEASE-12.2 they did not need "zpool import".
+After an upgrade to RELEASE-13 and "zpool upgrade", the mirror needs to be imported after each restart.
+By the way, the base system is installed on a UFS disk.
+
+I look forward to your advise.

@@ -1,0 +1,10 @@
+
+Hi,  Allan, Benedict and Tom.
+
+I have trusty FreeBSD server sitting in my garage and doing many thing. I recently moved from old good MRTG to Prometheu/Grafana/node_exportes combo, which gave me better visibility on how ZFS is performing.
+And I notice one thing, while FRU amd MRU parts of ARC are approximately same size, number of hits on FRU is about 50 times higher than to MRU. I have more ARC misses then MRU hits.  It is understandable as I expect most of MRU is data comes from CCTV video recording which get written continuously, but never read.  CCTV recordins are on dedicated pool.
+
+So my question is: Is there way to config ZFS to do not waste MRU on data written to CCTV pool. That memory can be better use for other things.
+
+Regards
+   Paul 

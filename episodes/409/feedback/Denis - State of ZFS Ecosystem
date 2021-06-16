@@ -1,0 +1,14 @@
+Hi Alan, Benedict, Tom,
+
+As always, thanks for the show!
+
+I am somewhat confused about the state of ZFS development. 
+
+As far as I know, prior to FreeBSD 13.0, FreeBSD used a fork of Illumos version of ZFS, which, in turn, started as a fork of Sun implementation. And that fork was/is called "Open ZFS", and the web-site is openzfs.org. Now, Linux has/had its own fork, called ZFS on Linux, or ZoL, the web-site is zfsonlinux.org.
+
+Have these two forks been merged into what is called "OpenZFS 2.0" now? If not, what about the developers of the Illumos version, have they joined the effort or they continue working on their own version and we now have a diverging code base? What is the "official" web-site for "OpenZFS 2.0"?
+
+Maybe you could give me a rough estimate, how much, percentage-wise, the FreeBSD 13.0 version inherits from Illumos version, and what is ZoL contribution?  
+
+Thanks for clarifying,
+Denis

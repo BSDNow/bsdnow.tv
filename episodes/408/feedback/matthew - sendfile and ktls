@@ -1,0 +1,6 @@
+Hi all,
+
+The discussion around sendfile and ktls in episode 400 surprised me a little. The problem of using sendfile with connection encryption is familiar to me. But I was expecting the solution to involve BPF. Is there a reason specifically TLS support was implemented and not a more general “apply this arbitrary transformation function to incoming data” API? Maybe ktls is even implemented internally this way?
+
+Thanks,
+Matt
