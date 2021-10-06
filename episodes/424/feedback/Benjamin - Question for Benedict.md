@@ -1,0 +1,1 @@
+Benedict: when is your zpoolboy story coming out? (Or do you have a prepublication draft perhaps?)
