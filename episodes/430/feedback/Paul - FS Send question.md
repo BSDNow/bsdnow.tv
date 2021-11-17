@@ -1,0 +1,6 @@
+I'm working on backup solution for my system. Unfortunately "zfs send" is not an option for me. So I use classical approach. Take snapshots, mount them , and then backup as files. But it is appear to be way more problematic than it seems. 
+Problem one: All backup snapshots need to be created at exactly same time. Backup snapshots should present system at state similar to state after sudden power off. So it can't be achieved by a shell script creating snapshots one by one, snapshots will be created in slightly different moments.  But it seems that by using "zfs programm" it can be done. As operations done by zfs program are atomic.  I'm not sure about "zfs create -r pool@snapshot", is it atomic too? My problem is, how to do it for datasets on different pools? Is there way to create "instantaneous" snapshots on multiple pools. "zfs program" does not help here.
+
+Problem two: ZVOLs. How to expose them to backup program?  Is there a way to create device file pointing to snapshot? I can also just use "zfs sent" to sent data to file and then backup it, but it is highly inefficient. Is there better approach?  And last Q: why even single snapshot on ZVOL doubles disk usage? "used" is twice as big as "referenced" when even single snapshot exists.  
+
+Paul
