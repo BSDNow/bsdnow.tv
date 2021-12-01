@@ -1,0 +1,2 @@
+There was a discussion on Reddit that I was curious your thoughts on.  Could you give this a read and let me know what you're take on it is?
+https://www.reddit.com/r/BSD/comments/r32fbi/eli5_why_does_the_freebsd_community_hate_docker/
