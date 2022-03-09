@@ -1,0 +1,1 @@
+Listening to ep 444 and FYI Xwing and Tie Fighter series from gog or steam works well with wine or proton on steam when you run it with the /softwarecursor option. Star Trek games on gog work mostly ok with current wine. I’m a linux user, but maybe need to check this stuff out on FreeBSD.
