@@ -1,0 +1,1 @@
+Hi folks, question about virtualization: Is there a path to getting KVM-style hardware acceleration with FreeBSD's qemu port? Especially with VMs that require a gui (e.g. X11 client), bhyve isn't there. If not KVM, is Bhyve likely to achieve parity at some point? I spin up VMs as user workspaces and I'd do it on FreeBSD if I could.
