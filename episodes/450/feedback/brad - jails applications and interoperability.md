@@ -13,5 +13,7 @@ So I have two questions. First, (and I know your answer is going to be "it depen
 
 The second question is is there interoperabililty between jail tools? Can I build a jail with iocage and manage it later with bastille? Or can I change tools in midstream or do i have to recreate the jail in the new tool?
 
+Here is another use case for switching tools...Iocage uses ZFS for jails, so you can migrate them via ZFS send, if I am reading it correctly. Can I migrate an iocage jail to a bastille or cbsd jail system?
+
 Thanks.
 --b
