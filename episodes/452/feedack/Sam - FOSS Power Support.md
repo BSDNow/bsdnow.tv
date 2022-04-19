@@ -1,0 +1,3 @@
+
+
+Related to my question about Laptops: from your vantage point in your open-source communities, what do you think it would take for open source OSes to develop the kind of power management that Windows and Mac users enjoy? My experience has been that surest way to finish off the few milliwatt hours left in the old laptop you're repurposing is to put Linux on it. (Getting utility out of a 9 year-old machine again makes it worth it, though.) Is it a case of FOSS developers being happily focused on server hardware, not caring about laptop support? Hardware vendors in league with Redmond not wanting to share proprietary battery-saving magic? Not enough users bothering to ask?
