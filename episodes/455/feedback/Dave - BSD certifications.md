@@ -1,0 +1,1 @@
+Are the BSD certifications by the Linux professional institute useful for someone going from a Linux sysadmin to BSD?
