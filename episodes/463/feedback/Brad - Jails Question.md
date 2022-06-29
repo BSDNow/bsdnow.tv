@@ -1,19 +1,24 @@
-Dear Alan, Benedict & JT
 
-I became a FreeBSD and OpenBSD addicted after I broke my long-last relationship with Debian during the Covid-19 pandemic. Now I run FreeBSD on my main laptop and "cloud" servers, OpenBSD over and old Acer NetBook (do your remember the NetBook era?).
+Hello Benedict, Allan, Tom, and JT,
 
-After discovering FreeBSD I also started listening BSDNow TV but so far I just reached ep. 372... Starting I think from ep. 200 (not sure though...) 
+Long time listener of the show since before 2014. I enjoy all the information you guys pass along and look forward to each weeks episode.
 
-I love the free software culture but in the end looks like the BSD licenses are doing a better job to make all the parties involved happy.
+As a home user I have been using FreeBSD for file storage and backup sharing out pieces of the datasets over samba, nfs , and iSCSI. But it has always running on the host server directly. It wasn’t until a few months ago that I started to play with FreeBSD jails. Since I’ve gotten more comfortable with it I have started to consolidate some things like web servers, database servers, and similar into my main storage server to better utilize its hardware and save some power costs having less hardware turned on. It also seems much simpler to just set back up the jails and PF config to move to a new host, or recover something bad in a jail from a snapshot, or even save time if I decide to re-install the host OS fresh. I have been thinking about jailing ALL of the things, but cannot find much good info about if its actually a good idea or not. I’m thinking about letting the host server manage my zfs pools of course then just let pf on the box direct all incoming traffic to jails running on the host while nulls mounting the needed datasets into the jails. I do this now for the internal web servers, but not sure about my other services. Are some considered no-no’s to jail up? I’m sure a lot of them “could” work, but am curious “should” you do it even if it is possible:
 
-I am just passionate about informatics which leads me to have a small FreeBSD VPS for running a small capsule where mostly I like to share my journey on Gemini and FreeBSD/OpenBSD. 
+Samba
+NFS
+iSCSI
+DHCP
+DNS
+wireguard (as a host for my family’s phones & laptops to connect back home)
+Unifi controller
 
-Actually I had to shutdown my previous capsule on Digital Ocean since they dismissed official support for FreeBSD droplet and therefore I dismissed them, now I am building a new FreeBSD based Capsule on Vultr...
 
-This time I decided to share the VPS to another dude involved in the Gemini project, and I'd like to put in action some restrictions; for instance: I'd like to whitelist certain file extensions (.jpg, .png. .txt, .gmi, etc..) or blacklist file depends on it works; I'd like to put a limitation for the maximum weight allowed for uploading any file; quotas for each user (this is the only topic I found on the handbook).
+If it's ok or even suggested to run these jailed, can you recommend any sources to read up on for surprises I might encounter running as jails instead of on bare metal? Nothing other than wireguard will be public facing, not even the web sites. They are only needed for my family so we just vpn back to the house if we need to access it. 
 
-I read the handbook several time but I couldn't find anything related, also looks like sftp can't handle such requirements. I did not have idea if what I want to do if even feasible so any suggestions or recommendations is welcomed!
 
-Keep up with your great show,
-Freezr
 
+Thanks for your advice in advance,
+
+
+Brad.
