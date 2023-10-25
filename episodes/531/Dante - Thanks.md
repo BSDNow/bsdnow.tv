@@ -1,0 +1,4 @@
+
+Hey guys thanks for covering my blog post on BSD "4 Months of BSD" I liked your comments near the start about sounding like a prison sentence, I really didn't know what else to call it and keep it simple I may change it so it sounds more natural haha. I appreciate you taking the time to read and share my post I've never heard of your podcast before until now I think it's interesting reading the latest in the BSD space, if I may make a suggestion though, I think reading the whole blog post may drain users out. What I would do instead is highlight some sentences/sections that you want to cover from the posts and then discuss them with your thoughts. I'm surprised your haven't heard of any of the software I mentioned in the post Krita and stuff is like a KDE Suite alternative to the GNU based GIMP applications which I assume should work better on BSD as GNU has more incentive to support Linux. Keep up the great work 
+
+Thanks, Dante
