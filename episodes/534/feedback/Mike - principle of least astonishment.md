@@ -1,4 +1,5 @@
 Mike
+
 A benefit of FreeBSD and BSD in general is POLA (principle of least astonishment). This is nice but could it come back to bite us?
 
 Things change, are we resisting the inevitable and hurting adoption or are we just being responsible? Where is the compromise?
