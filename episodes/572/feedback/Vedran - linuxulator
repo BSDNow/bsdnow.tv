@@ -1,0 +1,10 @@
+Hello,
+
+Thanks to Gleb Popov's work to bring Rocky Linux 9 to Linuxulator that landed in Ports last month, it is again possible to run Visual Studio Code Remote over SSH on FreeBSD. I documented my experience with configuring it on my blog:
+
+https://group.miletic.net/en/blog/2024-06-14-how-to-run-visual-studio-vs-code-remote-over-ssh-on-freebsd-13-and-14/
+
+I hope you would find this interesting and would appreciate if you could feature this post on a future episode of your show.
+
+With best regards,
+Vedran Miletic 
