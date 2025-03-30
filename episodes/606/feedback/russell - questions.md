@@ -1,0 +1,6 @@
+Hey guys 🙂 I'm a Patreon member just FYI and decided to contact via here.  Here's a question for y'all or perhaps a show topic!  I'm moving from TrueNAS Core to FreeBSD 14.  As I'm doing that, I'm running into "the scary stuff" e.g. moving from an encrypted Zpool to a new server (finally decided that I'm going to probably go with a new Zpool, and zfs send encrypted to [hopefully] unencrypted (gotta make sure that's possible when I have time).  My current pool is 2x8TB, 2x10TB, and 2x12TB all mirrored in a single pool.  I got an awesome deal on 2x16TB refurb NAS drives from Seagate and that's enough room to move my current pool to then rebuild.  Lists of questions...
+
+1. Can I Zpool send from an encrypted disk to unencrypted?
+2. What's the best way to run an encrypted zpool these days?  TrueNAS I guess handled all the encryption stuff for me.  Not sure I need to, but if it's "free" why not?
+3. I'm thinking about adding these 2x16TB into the pool.  Is there a "recommended maximum" number of drives in a single Zpool?  Again, my thoughts are sets of mirrors so I can always upgrade storage size as I go by replacing a mirrored set.
+4. Any general recommendations for this move? (In my case I have a whole new Motherboard/CPU/RAM and SSD mirror pair running FreeBSD so it should be move over the storage at the end.)
