@@ -1,0 +1,5 @@
+Hello BSD Now Crew,
+
+As a dedicated BSD user for several years now I use FreeBSD for servers wherever possible, and have tried to use several of the BSD's for Desktop needs sometimes.  I wanted to surface a video from Explaining Computers where he tries GhostBSD, Midnight BSD, Hello System, and NomadBSD as desktop alternatives.  He is a heavy Linux desktop user, primarily focusing on the small form factor mini computers with x86_64, arm, and RISC-V.  I would say he is at least a good middle of the road to above average in the linux user world.  All of the issues he highlights in the video are ones I have also experienced when trying out the pre-rolled desktop systems.  
+
+I’m not sending in this video to bash on any of the involved OS's, but to highlight maybe a few places we could all polish to help with user adoption in the BSD world as they want to make the jump.  The October 2025 Windows 10 EOL, regardless of life and performance left in the excluded systems I feel will drive a lot more of the NON-MS alternatives to be picked up because a lot of people just can’t afford to buy new hardware.
